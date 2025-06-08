@@ -35,9 +35,9 @@ pip install -r requirements.txt
 ```
 
 ## Configure the PostgreSQL Database. 
- Either create a .env file containing this URL: 
-`DATABASE_URL=postgresql://chenard612:eiPI10LE170&@localhost:5433/tec_energy_db`
-Or alternatively, you can change the values directly inside the 'db.py' file in order to correspond to the information contained inside the 'docker.compose.yml' file.
+ Either create a '.env' file containing this URL: 
+```DATABASE_URL=postgresql://chenard612:eiPI10LE170&@localhost:5433/tec_energy_db```
+Or alternatively, you can change the values directly inside the **'db.py'** file in order to correspond to the information contained inside the **'docker.compose.yml'** file.
 Then, please run the following command. It should run the database in a docker container.
 
 ```bash
@@ -50,10 +50,12 @@ docker compose up -d
 uvicorn app.main:app --reload
 ```
 
-## Run this curl inside the command line to trigger the query of the CSV, its parsing and its insertion in the database.
+## Run the Query
+Run this curl inside the command line to trigger the query of the CSV, its parsing and its insertion in the database.
 
 ```bash
 curl -X POST http://localhost:8000/fetch
 ```
 
-## OPTIONAL: To automate the query of the CSV, please uncomment the code contained inside scheduler.py. By default, the query is scheduled to run every 6 hours, but has been disabled.
+## OPTIONAL: 
+To automate the query of the CSV, please uncomment the code contained inside scheduler.py. By default, the query is scheduled to run every 6 hours, but has been disabled.
