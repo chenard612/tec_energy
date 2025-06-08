@@ -35,10 +35,11 @@ pip install -r requirements.txt
 ```
 
 ## Configure the PostgreSQL Database. 
- Either create a '.env' file containing this URL: 
-```DATABASE_URL=postgresql://chenard612:eiPI10LE170&@localhost:5433/tec_energy_db```
+Please create a '.env' file containing this URL:
 
-Alternatively, you can change the values directly inside the **'db.py'** file in order to correspond to the information contained inside the **'docker.compose.yml'** file.
+```DATABASE_URL=postgresql://chenard612:eiPI10LE170&@localhost:5433/tec_energy_db```.
+
+Alternatively, you can change the values directly inside the **'db.py'** file in order to correspond to the information contained inside the **'docker-compose.yml'** file.
 Then, please run the following command. It should run the database in a docker container.
 
 ```bash
@@ -46,6 +47,7 @@ docker compose up -d
 ```
 
 ## Run the server with this command:
+This starts the FastAPI server on port 8000.
 
 ```bash
 uvicorn app.main:app --reload
