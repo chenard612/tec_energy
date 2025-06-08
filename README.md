@@ -35,10 +35,10 @@ pip install -r requirements.txt
 ```
 
 ## Configure the PostgreSQL Database. 
-# Either create a .env file containing this URL: 
+ Either create a .env file containing this URL: 
 `DATABASE_URL=postgresql://chenard612:eiPI10LE170&@localhost:5433/tec_energy_db`
-# Or alternatively, you can change the values directly inside the 'db.py' file in order to correspond to the information contained inside the 'docker.compose.yml' file.
-# Then, please run the following command. It should run the database in a docker container.
+Or alternatively, you can change the values directly inside the 'db.py' file in order to correspond to the information contained inside the 'docker.compose.yml' file.
+Then, please run the following command. It should run the database in a docker container.
 
 ```bash
 docker compose up -d
