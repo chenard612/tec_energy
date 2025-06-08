@@ -56,4 +56,4 @@ uvicorn app.main:app --reload
 curl -X POST http://localhost:8000/fetch
 ```
 
-## OPTIONAL: To automate the query of the CSV, please uncomment the code contained inside scheduler.py. By default, the query is scheduled to run every 6 hours.
+## OPTIONAL: To automate the query of the CSV, please uncomment the code contained inside scheduler.py. By default, the query is scheduled to run every 6 hours, but has been disabled.
