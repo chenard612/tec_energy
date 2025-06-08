@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15
+    container_name: energy_transfer_db
+    restart: always
+    environment:
+      POSTGRES_USER: chenard612
+      POSTGRES_PASSWORD: eiPI10LE170&
+      POSTGRES_DB: tec_energy_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
