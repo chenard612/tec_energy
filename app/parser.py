@@ -30,7 +30,6 @@ def parse_csv_file(csv_content):
                 "quantity_reason": row['Qty Reason']
             }
             valid_rows.append(energy_transfer)
-            print(f"✅ Parsed {len(valid_rows)} rows from CSV")
         except Exception as e:
             print(f"Skipping row: {e}")
     save_energy_transfers(valid_rows)
