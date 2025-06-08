@@ -15,14 +15,14 @@ A FastAPI application that downloads CSV files describing natural gas shipments,
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 - Python 3.10+
 - Docker & Docker Compose
 
 ---
 
-## 📂 Project Setup
+## Project Setup
 
 ### 1. Clone the Repository
 
@@ -37,6 +37,6 @@ pip install -r requirements.txt
 
 docker compose up -d
 
-uvicorn app.main:app --reload --port 8001
+uvicorn app.main:app --reload
 
-curl -X POST http://localhost:8001/fetch
+curl -X POST http://localhost:8000/fetch
