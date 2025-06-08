@@ -32,7 +32,6 @@ def query_csv():
 
         csv_response = requests.get(csv_url)
 
-
         if csv_response.status_code == 200:
             print(f"[{date.date()}] Downloaded CSV successfully")
             parse_csv_file(csv_response.text)

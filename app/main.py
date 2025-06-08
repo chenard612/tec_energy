@@ -1,14 +1,18 @@
 from fastapi import FastAPI
+from contextlib import asynccontextmanager
 from app.scheduler import start_scheduler
 from app.api import query_csv
 from app.db import init_db
 
-app = FastAPI(title="Tec Energy Interview Exercise",)
 
-@app.on_event("startup")
-def on_startup():
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
     init_db()     
     start_scheduler()
+    yield
+    
+app = FastAPI(title="Tec Energy Interview Exercise", lifespan=lifespan)
 
 @app.get("/")
 def read_root():
